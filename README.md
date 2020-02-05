@@ -1,2 +1,2 @@
 # RubyLearn
-Hari ertama belajar Ruby
+Hari Pertama belajar Ruby

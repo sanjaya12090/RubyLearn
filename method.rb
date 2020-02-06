@@ -73,3 +73,4 @@ def setarray(itemA, itemB, itemC)
 end
 Arr1 = ['Thang', 'Thing', 'Thung']
 setarray(*Arr1)
+

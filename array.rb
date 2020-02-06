@@ -105,3 +105,55 @@ array = [1,2,3,4,5]
 puts array[0]
 puts array[3]
 puts array[9]
+
+# Acak Array dengan Shuffle(random)
+puts '---'
+arrr =  [1,2,3,4,5]
+puts "#{arrr.shuffle!}"
+# puts "#{arrr}"
+
+#Looping array dengan While
+puts '---'
+total = 1
+# while total < arrr.length do
+#     puts arrr[total]
+#     total += 1
+# end
+while total < 6 do
+    puts "total = #{total}"
+    total += 1
+end 
+
+# 
+puts '---'
+arrr1 = [1,2,3,4,5]
+for item in arrr1 do #for -> Untuk array (khusus)
+    puts item
+end
+
+# arrr1.map do |ind|
+#     puts.arrr1
+# end
+
+# cara imperative atau tradisional
+puts '--'
+array = [60, 70, 80, 100, 65]
+arrayBaru = []
+array.each do |item|
+    if item >= 70
+        arrayBaru << item
+    end
+end
+puts arrayBaru
+
+#select 
+puts '---'
+arrayBaru = array.select do |item|
+    item <100
+end
+puts "#{arrayBaru}"
+
+# one line select
+puts '---'
+puts "#{array.select{|item| item <100 }}"
+

@@ -27,13 +27,4 @@ end
  puts "#{array}"
  puts "#{array}".gsub("1",'')
 
- arr = []
- 4.upto(9) do |a|
-    puts arr.push(a)
-end
-
-arr.delete_if do |a|
-    a > 7
-end
-puts arr
-puts arr.join('M')
+ arr = []abu')

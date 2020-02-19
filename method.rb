@@ -36,7 +36,7 @@ kirim
 kirim(nama: 'Sanjaya')
 kirim(email: 'dssanjaya@gmail.com')
 kirim(email: 'dssanjaya@gmail.com', nama: 'Sanjaya')
-
+puts '--'
 # Variable sebagai method
 cetak = Proc.new do
     puts 'Cetak Kata'

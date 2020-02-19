@@ -83,3 +83,64 @@ puts '---'
 #         @text = text
 #     end
 # end
+
+
+class Print
+    attr_accessor :text
+    attr_writer :text #setter
+    attr_reader :text #getter
+
+    def initialize(text)
+        @teks = text
+    end
+    # setter
+    def text(text)
+        @text = text
+    end
+    # getter
+    def text
+        @text 
+    end
+
+    def print
+        puts "mencetak : #{@teks}"
+    end
+
+end
+printer = Print.new("hallo")
+    printer.print
+    printer.text = "tulisan kedua"
+    puts printer.text
+    printer.text = "ikan"
+    puts printer.text
+
+    
+    puts '---'
+    class Print
+        # attr_accessor :text
+        # attr_writer :text #setter
+        attr_reader :text #getter
+    
+        def initialize(text)
+            @teks = text
+        end
+        # setter
+        def text(text)
+            @text = text
+        end
+        # getter
+        # def text
+        #     @text 
+        # end
+    
+        def print
+            puts "mencetak : #{@teks}"
+        end
+    
+    end
+    printer = Print.new("hallo")
+        printer.print
+        printer.text = "tulisan kedua"
+        puts printer.text
+        printer.text = "ikan"
+        puts printer.text

@@ -227,6 +227,7 @@ class MesinPencetak
     def initialize(text)
         @text = text
     end
+
     def cetak(format)
         cekformat(@text, format)
     end
@@ -234,7 +235,7 @@ class MesinPencetak
     def cekformat(text, format)
         if format == :plain
             text
-        elsif format == :blink
+         elsif format == :blink
             "*** #{text} ***"
         end
     end
@@ -362,4 +363,100 @@ version = facebook_connection.version
 puts status
 puts version
 
+puts '---'
+class Virgi
+    def initialize(a, b)
+        @parameter_a = a 
+        @parameter_b = b
+    end
 
+    def pertambahan
+        @parameter_a + @parameter_b
+        
+    end
+end
+calc = Virgi.new(10, 5)
+hasil = calc.pertambahan
+puts hasil
+
+puts '---'
+class Agam
+    def initialize(text)
+        @text = text
+    end    
+    
+    def cetak
+        "Hari Ini lebih baik dari pada hari #{@text}."
+    end
+end
+ikan = Agam.new("kemarin")
+puts ikan.cetak
+# puts ikan.text
+
+puts '---'
+class Cau
+    def initialize(text)
+        @text = text
+    end
+
+    def text
+        @text
+    end
+
+    def cetak
+        "Hari Ini lebih baik dari pada hari #{@text}."
+    end
+end
+ikan = Cau.new("kemarin")
+puts ikan.cetak
+puts ikan.text
+
+puts '---'
+class Ruby
+    attr_reader :ikan, :ruby #
+
+    def initialize(ikan, ruby)
+        @ikan = ikan
+        @ruby = ruby
+    end
+
+    def hasil
+        puts "Hari ini begitu #{@ikan}"        
+        "Saya adalah #{@ruby}"
+    end
+end
+saya = Ruby.new("Indah", "?")
+puts saya.hasil
+
+puts '---'
+class Ikan
+    attr_accessor :text
+    attr_writer :text #setter
+    attr_reader :text #getter
+
+    def initialize(text)
+        @teks = text
+    end
+    # setter
+    def text(text)
+        @text = text
+    end
+    # getter
+    def text
+        @text 
+    end
+
+    def print
+        puts "mencetak : #{@teks}"
+    end
+
+end
+
+printer = Ikan.new("hallo")
+    printer.print
+    printer.text = "tulisan kedua"
+    puts printer.text
+    printer.text = "ikan"
+    puts printer.text
+
+puts '---'

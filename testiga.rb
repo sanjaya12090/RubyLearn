@@ -27,4 +27,4 @@ end
  puts "#{array}"
  puts "#{array}".gsub("1",'')
 
- arr = []abu')
+#  arr = []abu')

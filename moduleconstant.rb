@@ -50,23 +50,23 @@ puts bagi(8,2)
 
 # satu
 puts '--'
-# def prima(a)
-#     c = 0
-#     for i in 1..(a)
-#     if a % i == 0
-#       c = c + 1
-#     end
-#     end
-#     if c == 2
-#       print a,"\n"
-#     end
-#   end
-#   print "angka: "
-#   a = gets.to_i
-#   for i in 1..(a)
-#   prima(i)
-#   i = i + 1
-#   end
+def prima(a)
+    c = 0
+    for i in 1..(a)
+    if a % i == 0
+      c = c + 1
+    end
+    end
+    if c == 2
+      print a,"\n"
+    end
+  end
+  print "angka: "
+  a = gets.to_i
+  for i in 1..(a)
+  prima(i)
+  i = i + 1
+  end
   
 prima = []
 1.upto(100) do |x|

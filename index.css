@@ -1,0 +1,143 @@
+.card {
+    width: 400px;
+    height: 70px;
+    background: snow;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.card > .symbol {
+    background: steelblue;
+}
+
+.card::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: skyblue;
+    display: block;
+}
+
+.card::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: red;
+    display: block;    
+}
+
+.forflex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.symbol {
+    height: 20px;
+    width: 20px;
+    background: springgreen;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.symbol::before {
+    height: 20px;
+    width: 20px;
+    background: brown;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+.segitiga {
+    border-width: 50px;
+    border-color: transparent transparent green transparent;
+    border-style: solid;
+    width: 0px;
+}
+
+.segitiga::before {
+    content: '';
+    border-width: 57px;
+    border-color: transparent transparent greenyellow transparent;
+    border-style: solid;
+    width: 0px;
+    position: absolute;
+    z-index: -1;
+    top: -6px;
+    left: 6px;
+}
+
+
+/* Grid */
+.forgrid {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "head head" "side content";
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background: salmon;
+    grid-area: head;
+
+}
+
+.sidebar {
+    width: 100px;
+    height: calc(100vh - 100px);
+    background: sandybrown;
+    grid-area: side;
+}
+
+/* content */
+.content {
+    width: 100%;
+    /* width: calc(100vh - 100px); */
+    height: auto;
+    grid-area: content;
+}
+
+@media screen and (max-width: 1000px) {
+    .forgrid {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows : 100px auto 100px;
+        grid-template-areas : "head" "content" "side";
+    }
+
+    .sidebar {
+        width: 100%;
+        height: 50px;
+    }
+
+    .content {
+        height: 100%;
+        height: calc(100vh - 100px);
+    }
+}
+
+.carditem {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: seagreen;
+    border-radius: 10px;
+}
+
+.card-group .carditem:first-child {
+    background-color: crimson;
+}
+
+.carditem:first-of-type {
+    background-color: darkgoldenrod;
+}
+
+
+
+
